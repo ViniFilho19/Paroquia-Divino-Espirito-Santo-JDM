@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Paróquia Divino Espírito Santo | Uma Igreja viva guiada pelo Espírito Santo</title>
+    <!-- Favicon -->
+<link rel="icon" href="img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="styles.css">
+    
+
+
+
+
+</head>
+<body>
+<!-- <nav>
+        <a class="logo" href="/">Tiger Codes</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav> -->
+
+
+      <!-- SUBSTITUA o seu <nav>...</nav> inteiro (e o bloco comentado acima dele) por isto -->
+<header class="site-header">
+
+    <!-- Barra superior: links institucionais + redes sociais (some no mobile) -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-links">
+                <a href="https://www.vaticannews.va/pt.html" target="_blank" rel="noopener">Vaticano</a>
+                <a href="https://www.cnbb.org.br" target="_blank" rel="noopener">CNBB</a>
+                <a href="https://arquidiocesesalvador.org.br" target="_blank" rel="noopener">Arquidiocese</a>
+            </div>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav>
+        <a href="/01.PROTOTIPOS/index.html"><img class="nav-logo" src="img/paroquia-logo-alterada.png" alt="Paróquia Divino Espirito Santo"></a>
+
+        <div class="mobile-menu" aria-label="Abrir menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <!-- Agora o <a> fica DENTRO do <li> (o seu estava invertido, o que é HTML inválido) -->
+        <ul class="nav-list">
+            <li><a href="index.html" class="ativo">Início</a></li>
+            <li><a href="#paroquia">Paróquia</a></li>
+            <li><a href="comunidades.html">Comunidades</a></li>
+            <li><a href="#horarios">Agenda</a></li>
+            <li><a href="pastorais.html">Pastorais</a></li>
+            <li><a href="#">Dízimo</a></li>
+            <li><a href="sacramentos.html">Sacramentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+
+            <!-- Redes sociais dentro do menu mobile (escondido no desktop) -->
+            <li class="nav-social">
+                <ul class="social">
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!-- <nav>
+   <a href="/01.PROTOTIPOS/index.html"><img class="nav-logo" src="img/paroquia-logo-alterada.png" alt="Paróquia Divino Espirito Santo"> </a>
+   <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+   </div>
+   <ul class="nav-list">
+    <a href=""> <li >Inicio</li></a>
+    <a href=""> <li >Paróquia</li></a>
+    <a href=""> <li>Comunidades</li></a>
+    <a href=""> <li>Agenda</li></a>
+    <a href=""> <li>Pastorais</li></a>
+    <a href=""><li>Dizimo</li></a>
+    <a href=""> <li>Sacramentos</li></a>
+    <a href=""> <li>Contato</li></a>
+   </ul>
+</nav> -->
+
+
+<!-- ============ INÍCIO DO SLIDESHOW ============ -->
+<section class="sl" aria-roledescription="carrossel" aria-label="Nossa paróquia e comunidades">
+    <div class="sl-track">
+ 
+        <!-- Slide 1: Igreja Matriz -->
+        <article class="sl-slide is-active" aria-roledescription="slide" aria-label="1 de 3">
+            <div class="sl-bg sl-bg--1">
+                <i class="fas fa-church sl-ph" aria-hidden="true"></i>
+                <!-- Troque pela foto real: img/slide-matriz.jpg (se não existir, aparece o fundo genérico) -->
+                <img src="img/paroquia-foto.jpg" alt="Fachada da Igreja Matriz" onerror="this.remove()">
+            </div>
+            <div class="container sl-content">
+                <span class="sl-tag"><i class="fas fa-church"></i> Igreja Matriz</span>
+                <h2 class="sl-title">Paróquia Divino Espírito Santo</h2>
+                <span class="sl-line"></span>
+                <p class="sl-desc">O coração da nossa paróquia, onde a comunidade se reúne para celebrar a Santa Missa e viver a fé.</p>
+                <div class="sl-botoes">
+                    <a href="#horarios" class="btn-dourado">Ver horários de missa</a>
+                    <a href="#paroquia" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+            </div>
+        </article>
+ 
+        <!-- Slide 2: Comunidade Nossa Senhora do Carmo -->
+        <article class="sl-slide" aria-roledescription="slide" aria-label="2 de 3">
+            <div class="sl-bg sl-bg--2">
+                <i class="fas fa-place-of-worship sl-ph" aria-hidden="true"></i>
+                <!-- Troque pela foto real: img/slide-carmo.jpg -->
+                <img src="img/missa-carmo1.jpg" alt="Comunidade Nossa Senhora do Carmo" onerror="this.remove()">
+            </div>
+            <div class="container sl-content">
+                <span class="sl-tag"><i class="fas fa-place-of-worship"></i>Paróquia Divino Espírito Santo </span>
+                <h2 class="sl-title">Comunidade Nossa Senhora do Carmo</h2>
+                <span class="sl-line"></span>
+                <p class="sl-desc">Uma comunidade acolhedora, unida na oração e na caminhada da fé.</p>
+                <div class="sl-botoes">
+                    <a href="#horarios" class="btn-dourado">Ver horários de missa</a>
+                    <a href="comunidades.html#carmo" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+            </div>
+        </article>
+ 
+        <!-- Slide 3: Comunidade Bom Pastor -->
+        <article class="sl-slide" aria-roledescription="slide" aria-label="3 de 3">
+            <div class="sl-bg sl-bg--3">
+                <i class="fas fa-cross sl-ph" aria-hidden="true"></i>
+                <!-- Troque pela foto real: img/slide-bom-pastor.jpg -->
+                <img src="img/foto-bompastor2.png" alt="Comunidade Bom Pastor" onerror="this.remove()">
+            </div>
+            <div class="container sl-content">
+                <span class="sl-tag"><i class="fas fa-cross"></i>Paróquia Divino Espírito Santo </span>
+                <h2 class="sl-title">Comunidade Bom Pastor</h2>
+                <span class="sl-line"></span>
+                <p class="sl-desc">Cuidado e acolhida para todos, seguindo os passos de Cristo, o Bom Pastor.</p>
+                <div class="sl-botoes">
+                    <a href="#horarios" class="btn-dourado">Ver horários de missa</a>
+                    <a href="comunidades.html#bom-pastor" class="btn-saiba-mais">Saiba mais</a>
+                </div>
+            </div>
+        </article>
+ 
+    </div>
+ 
+    <button type="button" class="sl-arrow sl-prev" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+    <button type="button" class="sl-arrow sl-next" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
+ 
+    <div class="sl-dots" role="group" aria-label="Escolher slide"></div>
+ 
+    <button type="button" class="sl-pausa" aria-label="Pausar a troca automática dos slides"><i class="fas fa-pause"></i></button>
+</section>
+<!-- ============ FIM DO SLIDESHOW ============ -->
+
+<section id="paroquia" class="paróquia-section">
+    <div class="paróquia-container">
+
+        <div class="paróquia-conteudo">
+
+            <!-- Cabeçalho -->
+            <div class="paróquia-header">
+
+                <!-- <div class="paróquia-icone">
+                    <span>✝</span>
+                </div> -->
+
+                <div>
+                    <span class="paróquia-subtitulo">
+                        PARÓQUIA
+                    </span>
+
+                    <h1>
+                        Paróquia Divino Espírito Santo
+                    </h1>
+
+                    <h2>
+                        Uma Igreja viva guiada pelo Espírito Santo
+                    </h2>
+                </div>
+
+            </div>
+
+            <!-- Texto -->
+            <div class="paróquia-texto">
+
+                <p>
+                    A Paróquia Divino Espírito Santo nasce como fruto da graça
+                    de Deus e do amadurecimento da fé de seu povo. Elevada à
+                    condição de paróquia, esta igreja particular assume, com
+                    renovado ardor missionário, a missão de ser presença viva
+                    de Cristo no coração da comunidade, guiada pela ação
+                    amorosa e constante do Espírito Santo.
+                </p>
+
+                <p>
+                    Em nossa caminhada paroquial, realizamos celebrações da
+                    Santa Missa, encontros de oração, catequese para crianças,
+                    jovens e adultos, grupos de juventude e diversas iniciativas
+                    pastorais e sociais.
+                </p>
+
+                <p>
+                    Cada atividade é expressão de uma Igreja que evangeliza,
+                    forma discípulos missionários e se coloca a serviço dos que
+                    mais precisam, promovendo dignidade, esperança e
+                    solidariedade.
+                </p>
+
+                <p>
+                    Fortalecemos ainda mais nossa missão de ser sinal de unidade
+                    e comunhão. Aqui, cada pessoa é chamada a participar
+                    ativamente da vida paroquial, colocando seus dons a serviço
+                    da evangelização.
+                </p>
+
+                <p>
+                    Convidamos você e sua família a conhecerem nossas atividades,
+                    celebrarem conosco e fazerem parte desta história de fé que
+                    continua a ser escrita sob a luz do Espírito Santo.
+                </p>
+
+            </div>
+
+            <!-- Frase final -->
+            <div class="paróquia-frase">
+
+                <span class="linha-dourada"></span>
+
+                <span class="icone-pomba">♢</span>
+
+                <strong>
+                    Que o Divino Espírito Santo ilumine seus passos!
+                </strong>
+
+            </div>
+
+        </div>
+
+        <!-- Imagem decorativa -->
+        <div class="paróquia-imagem">
+            <img src="" alt="">;
+            <div class="cruz">✝</div>
+        </div>
+
+    </div>
+
+</section>
+<!-- SUBSTITUA a sua <section id="horarios"> inteira por esta -->
+<section id="horarios" class="horarios">
+    <div class="container">
+        <h2 class="section-title">Horários de Missa</h2>
+
+        <!-- Missas por comunidade -->
+        <div class="h-grid">
+            <article class="h-card">
+                <header class="h-card-head">
+                    <span class="h-icon"><i class="fas fa-church"></i></span>
+                    <h3>Igreja Matriz</h3>
+                </header>
+                <ul class="h-lista">
+                    <li><span class="dia">Domingo</span><span class="hora">7h30</span></li>
+                    <li><span class="dia">Terça</span><span class="hora">19h30</span></li>
+                    <li><span class="dia">Quinta</span><span class="hora">7h</span></li>
+                    <li><span class="dia">Última quinta do mês</span><span class="hora">19h30</span></li>
+                </ul>
+            </article>
+
+            <article class="h-card">
+                <header class="h-card-head">
+                    <span class="h-icon"><i class="fas fa-place-of-worship"></i></span>
+                    <h3>Com. Nossa Sra. do Carmo</h3>
+                </header>
+                <ul class="h-lista">
+                    <li><span class="dia">Domingo</span><span class="hora">9h</span></li>
+                    <li><span class="dia">Sexta</span><span class="hora">18h30</span></li>
+                </ul>
+            </article>
+
+            <article class="h-card">
+                <header class="h-card-head">
+                    <span class="h-icon"><i class="fas fa-cross"></i></span>
+                    <h3>Com. Bom Pastor</h3>
+                </header>
+                <ul class="h-lista">
+                    <li><span class="dia">Domingo</span><span class="hora">10h30</span></li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Confissões e Adoração -->
+        <div class="h-info-grid">
+            <article class="h-info">
+                <span class="h-icon"><i class="fas fa-hands-praying"></i></span>
+                <div>
+                    <h4>Confissões</h4>
+                    <p class="local">Igreja Matriz</p>
+                    <p>Terças e Quintas-feiras</p>
+                    <p class="hora">16h30 às 19h</p>
+                </div>
+            </article>
+
+            <article class="h-info">
+                <span class="h-icon"><i class="fas fa-person-praying"></i></span>
+                <div>
+                    <h4>Adoração ao Santíssimo</h4>
+                    <p class="local">Igreja Matriz</p>
+                    <p>Quintas-feiras</p>
+                    <p class="hora">18h às 20h30</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Orações -->
+        <h3 class="h-subtitulo">Orações e Grupos de Oração</h3>
+        <div class="h-oracoes">
+            <article class="h-oracao">
+                <span class="h-icon"><i class="fas fa-cross"></i></span>
+                <h4>Terço dos Homens</h4>
+                <p>Igreja Matriz</p>
+                <p class="hora">19h</p>
+            </article>
+
+            <article class="h-oracao">
+                <span class="h-icon"><i class="fas fa-cross"></i></span>
+                <h4>Rosário do Carmo</h4>
+                <p>Com. Nossa Sra. do Carmo</p>
+                <p class="hora">16h</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- HORÁRIOS DE MISSA
+<section id="horarios">
+    <div class="container">
+        <h2 class="section-title">Horários de Missa</h2>
+        <div class="cards-grid">
+            <div class="card-horario">
+                <h3><i class="fas fa-church"></i> Igreja Matriz</h3>
+                <p><span class="horario-destaque">Domingo:</span> 7h30</p>
+                <p><span class="horario-destaque">Terça:</span> 19h30</p>
+                <p><span class="horario-destaque">Quinta:</span> 7h</p>
+                <p><span class="horario-destaque">Última Quinta do mês:</span> 19h30</p>
+            </div>
+            <div class="card-horario">
+                <h3><i class="fas fa-place-of-worship"></i> Com. Nossa Sra. do Carmo</h3>
+                <p><span class="horario-destaque">Domingo:</span> 9h</p>
+                <p><span class="horario-destaque">Sexta:</span> 18h30</p>
+            </div>
+            <div class="card-horario">
+                <h3><i class="fas fa-cross"></i> Com. Bom Pastor</h3>
+                <p><span class="horario-destaque">Domingo:</span> 10h30</p>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 40px; justify-content: center;">
+            <div class="info-card" style="flex:1; min-width: 250px;">
+                <h4><i class="fas fa-hands-praying"></i> Confissões</h4>
+                <p><strong>Igreja Matriz:</strong></p>
+                <p>Terças e Quintas-feiras</p>
+                <p><span class="horario-destaque">16h30 às 19h</span></p>
+            </div>
+            <div class="info-card" style="flex:1; min-width: 250px;">
+                <h4><i class="fas fa-person-praying"></i> Adoração ao Santíssimo</h4>
+                <p><strong>Igreja Matriz:</strong></p>
+                <p>Quintas-feiras</p>
+                <p><span class="horario-destaque">18h às 20h30</span></p>
+            </div>
+        </div>
+
+        <h3 style="text-align: center; margin-top: 50px; color: #8B0000;">Orações e Grupos de Oração</h3>
+        <div class="oracoes-grid">
+            <div class="oracao-card">
+                <i class="fas fa-cross"></i>
+                <h4>Terço dos Homens</h4>
+                <p>Igreja Matriz</p>
+                <p><span class="horario-destaque">19h</span></p>
+            </div>
+            <div class="oracao-card">
+                <i class="fas fa-cross"></i>
+                <h4>Rosário do Carmo</h4>
+                <p>Com. Nossa Sra. do Carmo</p>
+                <p><span class="horario-destaque">16h</span></p>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- MENSAGEM DO PÁROCO
+<section style="background:#F5F5F5;">
+    <div class="container two-columns">
+        <div class="col-image">
+            <img src="https://arquidiocesesalvador.org.br/wp-content/uploads/2023/06/Seminaristas-ordenantes-2023-Fotos-Sara-Gomes-5-500x750.jpg" alt="Pe. Caio Silva - Pároco">
+        </div>
+        <div class="col-text">
+            <h2 style="color:#8B0000; font-family:'Playfair Display';">Mensagem do Pároco</h2>
+            <p style="font-size:1.2rem; margin: 20px 0; line-height:1.5;">Seja muito bem-vindo à Paróquia Divino Espírito Santo. Somos uma comunidade viva, unida e guiada pelo Espírito Santo. Sinta-se em casa e participe conosco.</p>
+            <p style="font-weight:bold; color:#8B0000; font-size:1.1rem;">— Pe. Caio Silva</p>
+        </div>
+    </div>
+</section>
+
+ PASTORAIS -->
+<!-- <section>
+    <div class="container">
+        <h2 class="section-title">Encontre seu lugar na comunidade</h2>
+        <div class="pastoral-items">
+            <div class="pastoral-card"><i class="fas fa-church"></i><h3>Liturgia</h3><p>Serviço do altar</p></div>
+            <div class="pastoral-card"><i class="fas fa-bible"></i><h3>Catequese</h3><p>Formação na fé</p></div>
+            <div class="pastoral-card"><i class="fas fa-users"></i><h3>Juventude</h3><p>Encontros e missão</p></div>
+            <div class="pastoral-card"><i class="fas fa-hand-holding-heart"></i><h3>Ação Social</h3><p>Solidariedade ativa</p></div>
+            <div class="pastoral-card"><i class="fas fa-heart"></i><h3>Pastoral do Dízimo</h3><p>Gesto de fé e gratidão</p></div>
+            <div class="pastoral-card"><i class="fas fa-building"></i><h3>Comunidades</h3><p>Matriz | Carmo | Bom Pastor</p></div>
+        </div>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="#" class="btn-primary">Ver todas as pastorais</a>
+        </div>
+    </div>
+</section> -->
+
+<!-- SACRAMENTOS -->
+<!-- <section style="background:#F5F5F5;">
+    <div class="container">
+        <h2 class="section-title">Sacramentos</h2>
+        <div class="sacramentos-list">
+            <div class="sacramento-badge"><i class="fas fa-water"></i> Batismo</div>
+            Eucaristia com ícone de Hóstia personalizado -->
+            <!-- <div class="sacramento-badge">
+                <span class="icone-hostia">
+                    <span class="circulo-hostia"></span>
+                </span>
+                Eucaristia
+            </div>
+            <div class="sacramento-badge"><i class="fas fa-dove"></i> Crisma</div>
+            <div class="sacramento-badge"><i class="fas fa-heart"></i> Matrimônio</div>
+            <div class="sacramento-badge"><i class="fas fa-hand-holding-heart"></i> Unção dos Enfermos</div>
+        </div>
+        <div style="text-align:center;">
+            <a href="#" class="btn-primary">Saiba como receber</a>
+        </div>
+    </div>
+</section> -->
+
+
+
+<!-- MENSAGEM DO PÁROCO -->
+<section id="paroco" class="paroco">
+    <div class="container">
+        <div class="p-wrap">
+            <figure class="p-foto">
+                <img src="img/Pe.Caio-Comunhao2.jpeg" alt="Pe. Caio Silva - Pároco">
+            </figure>
+
+            <div class="p-texto">
+                <span class="p-eyebrow">Palavra do Pároco</span>
+                <h2 class="section-title p-title">Mensagem do Pároco</h2>
+                <blockquote>
+                    Seja muito bem-vindo à Paróquia Divino Espírito Santo. Somos uma comunidade viva, unida e guiada pelo Espírito Santo. Sinta-se em casa e participe conosco.
+                </blockquote>
+                <p class="p-assinatura">
+                    <strong>Pe. Caio Silva</strong>
+                    <span>Pároco</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Outras mensagens (textos de exemplo: troque pelos do pároco) -->
+        <div class="p-msgs">
+            <article class="p-msg">
+                <span class="h-icon"><i class="fas fa-users"></i></span>
+                <h3>Participe</h3>
+                <p>Há um lugar para você em nossas pastorais e comunidades. Procure a secretaria e descubra onde servir.</p>
+            </article>
+            <article class="p-msg">
+                <span class="h-icon"><i class="fas fa-church"></i></span>
+                <h3>Venha rezar conosco</h3>
+                <p>As portas da nossa igreja estão sempre abertas. Venha celebrar a Santa Missa e adorar o Santíssimo.</p>
+            </article>
+            <article class="p-msg">
+                <span class="h-icon"><i class="fas fa-hands-praying"></i></span>
+                <h3>Conte conosco</h3>
+                <p>Precisando de uma palavra amiga ou de uma oração, fale com a gente. Ninguém caminha sozinho.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- SACRAMENTOS (no lugar de "Encontre seu lugar na comunidade") -->
+<section id="sacramentos" class="sacramentos">
+    <div class="container">
+        <h2 class="section-title">Sacramentos</h2>
+        <p class="s-sub">Os sinais da graça de Deus na vida da Igreja</p>
+
+        <div class="s-grid">
+            <article class="s-card">
+                <span class="h-icon s-icon"><i class="fas fa-water"></i></span>
+                <h3>Batismo</h3>
+                <p>A porta da vida cristã, que nos faz filhos de Deus.</p>
+            </article>
+            <article class="s-card">
+                <span class="h-icon s-icon"><i class="fas fa-hands-praying"></i></span>
+                <h3>Confissão</h3>
+                <p>O perdão e a reconciliação com Deus e com a Igreja.</p>
+            </article>
+            <article class="s-card">
+                <span class="h-icon s-icon"><span class="s-hostia"></span></span>
+                <h3>Eucaristia</h3>
+                <p>O Corpo e o Sangue de Cristo, alimento da nossa fé.</p>
+            </article>
+            <article class="s-card">
+                <span class="h-icon s-icon"><i class="fas fa-dove"></i></span>
+                <h3>Crisma</h3>
+                <p>A plenitude do Espírito Santo para a missão.</p>
+            </article>
+            <article class="s-card">
+                <span class="h-icon s-icon"><i class="fas fa-ring"></i></span>
+                <h3>Matrimônio</h3>
+                <p>A aliança de amor entre o homem e a mulher diante de Deus.</p>
+            </article>
+            <article class="s-card">
+                <span class="h-icon s-icon"><i class="fas fa-cross"></i></span>
+                <h3>Ordem</h3>
+                <p>O chamado para servir como bispo, padre ou diácono.</p>
+            </article>
+            <article class="s-card">
+                <span class="h-icon s-icon"><i class="fas fa-hand-holding-heart"></i></span>
+                <h3>Unção dos Enfermos</h3>
+                <p>Conforto e força na doença e na fragilidade.</p>
+            </article>
+        </div>
+
+        <div class="s-cta">
+            <a href="#" class="btn-primary">Saiba como receber</a>
+        </div>
+    </div>
+</section>
+<!-- SEÇÃO A PALAVRA -->
+<!-- SEÇÃO A PALAVRA -->
+<section id="a-palavra" class="palavra">
+    <div class="container">
+        <h2 class="section-title">A Palavra</h2>
+        <p class="s-sub">Reflexões para alimentar a alma e fortalecer a fé</p>
+
+        <div class="w-grid">
+            <article class="w-card" onclick="alertReflexao('A Misericórdia de Deus')">
+                <div class="w-img">
+                    <img src="img/Jesus-Eucaristico.png" alt="A Misericórdia de Deus" loading="lazy">
+                </div>
+                <div class="w-body">
+                    <span class="w-tag"><i class="fas fa-heart"></i> Reflexão</span>
+                    <h3>A Misericórdia de Deus</h3>
+                    <p class="w-versiculo">"A misericórdia do Senhor é a razão de não sermos consumidos; as suas misericórdias são inesgotáveis." (Lamentações 3:22)</p>
+                    <p class="w-resumo">Deus nunca desiste de nós. Cada dia é uma nova oportunidade para recomeçar...</p>
+                </div>
+            </article>
+
+            <article class="w-card" onclick="alertReflexao('A Força da Oração')">
+                <div class="w-img">
+                    <img src="img/oracao.png" alt="A Força da Oração" loading="lazy">
+                </div>
+                <div class="w-body">
+                    <span class="w-tag"><i class="fas fa-hands-praying"></i> Reflexão</span>
+                    <h3>A Força da Oração</h3>
+                    <p class="w-versiculo">"Orai sem cessar." (1 Tessalonicenses 5:17)</p>
+                    <p class="w-resumo">A oração é o diálogo da alma com Deus. Mesmo no silêncio, Ele nos escuta...</p>
+                </div>
+            </article>
+
+            <article class="w-card" onclick="alertReflexao('O Amor ao Próximo')">
+                <div class="w-img">
+                    <img src="img/Bibia.png" alt="O Amor ao Próximo" loading="lazy">
+                </div>
+                <div class="w-body">
+                    <span class="w-tag"><i class="fas fa-hand-holding-heart"></i> Reflexão</span>
+                    <h3>O Amor ao Próximo</h3>
+                    <p class="w-versiculo">"Amai-vos uns aos outros como eu vos amei." (João 15:12)</p>
+                    <p class="w-resumo">O amor que partilhamos é o verdadeiro testemunho da nossa fé...</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="s-cta">
+            <a href="#" class="btn-primary" onclick="alert('Em breve, mais reflexões!'); return false;">Ver todas as reflexões</a>
+        </div>
+    </div>
+</section>
+
+<!-- DÍZIMO -->
+<section class="dizimo">
+    <div class="container">
+        <div class="d-box">
+            <span class="h-icon d-icon"><i class="fas fa-hand-holding-heart"></i></span>
+            <h2 class="d-title">Seja parte desta missão.</h2>
+            <p class="d-texto">O dízimo é um gesto de fé e compromisso com a Igreja.</p>
+            <div class="pix-text"><i class="fas fa-qrcode"></i> PIX: dizimo@divinoespiritosanto.com.br</div>
+            <div>
+                <a href="#" class="btn-dourado">Contribuir agora</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PEDIDO DE ORAÇÃO -->
+<section class="pedido">
+    <div class="container">
+        <div class="po-card">
+            <span class="h-icon po-icon"><i class="fas fa-hands-praying"></i></span>
+            <h3>Envie seu pedido de oração e rezaremos por você.</h3>
+            <p>Conte-nos sua intenção. Ela será levada ao altar e à oração da nossa comunidade.</p>
+            <a href="pedido-oracao.html" class="btn-primary">Enviar pedido de oração <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contato">
+    <div class="container">
+        <h2 class="section-title">Fale Conosco</h2>
+        <p class="s-sub">Estamos de portas abertas para receber você</p>
+
+        <div class="c-grid">
+            <article class="c-card">
+                <span class="h-icon c-icon"><i class="fas fa-location-dot"></i></span>
+                <h3>Endereço</h3>
+                <p>Rua das Bromélias Brancas, nº 370, Jardim das Margaridas, Salvador - BA</p>
+                <p class="c-small">Igreja Matriz Divino Espírito Santo</p>
+            </article>
+
+            <article class="c-card">
+                <span class="h-icon c-icon"><i class="fas fa-phone"></i></span>
+                <h3>Telefone</h3>
+                <p><a href="tel:+55 7196479917">+55 71 9647-9917</a></p>
+                <p class="c-small">Secretaria: <a href="tel:+557133334444">(71) 3333-4444</a></p>
+            </article>
+
+            <article class="c-card">
+                <span class="h-icon c-icon"><i class="fas fa-envelope"></i></span>
+                <h3>Email</h3>
+                <p><a href="mailto:contato@divinoespiritosanto.com.br">contato@divinoespiritosanto.com.br</a></p>
+            </article>
+        </div>
+
+        <div class="s-cta">
+            <a href="https://wa.me/5571999999999" target="_blank" rel="noopener" class="btn-whatsapp-footer">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="f-top">
+            <div class="f-brand">
+                <strong>Paróquia Divino Espírito Santo</strong>
+                <span>Arquidiocese de Salvador</span>
+            </div>
+
+            <nav class="f-links" aria-label="Links do rodapé">
+                <a href="index.html">Início</a>
+                <a href="#horarios">Horários</a>
+                <a href="#sacramentos">Sacramentos</a>
+                <a href="#a-palavra">A Palavra</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/paroquiadivinoespiritosantojdm/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+
+        <p class="f-copy">© 2026 · Todos os direitos reservados · Paz e bem</p>
+    </div>
+</footer>
+
+<script src="mobile-navbar.js"></script>
+<script src="slideshow.js"></script>
+<script src="voltar-topo.js"></script>
+
+</body>
+</html>
