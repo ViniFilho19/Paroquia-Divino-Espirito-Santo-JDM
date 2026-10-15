@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pedido de Oração | Paróquia Divino Espírito Santo</title>
+<link rel="icon" href="/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS do site (o mesmo da home) + CSS desta página -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pedido-oracao.css">
+</head>
+<body>
+
+<!-- ============ CABEÇALHO (igual ao da home) ============ -->
+<header class="site-header">
+
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-links">
+                <a href="https://www.vaticannews.va/pt.html" target="_blank" rel="noopener">Vaticano</a>
+                <a href="https://www.cnbb.org.br" target="_blank" rel="noopener">CNBB</a>
+                <a href="https://arquidiocesesalvador.org.br" target="_blank" rel="noopener">Arquidiocese</a>
+            </div>
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav>
+        <a href="/01.PROTOTIPOS/home-v14.html"><img class="nav-logo" src="/img/paroquia-logo-alterada.png" alt="Paróquia Divino Espirito Santo"></a>
+
+        <div class="mobile-menu" aria-label="Abrir menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <!-- Troque o caminho da home se ela estiver em outro lugar -->
+        <ul class="nav-list">
+            <li><a href="/01.PROTOTIPOS/home-v14.html">Início</a></li>
+            <li><a href="/01.PROTOTIPOS/home-v14.html#paroquia">Paróquia</a></li>
+            <li><a href="/01.PROTOTIPOS/comunidades.html">Comunidades</a></li>
+            <li><a href="/01.PROTOTIPOS/home-v14.html#horarios">Agenda</a></li>
+            <li><a href="/01.PROTOTIPOS/pastorais.html">Pastorais</a></li>
+            <li><a href="#">Dízimo</a></li>
+            <li><a href="/01.PROTOTIPOS/sacramentos.html">Sacramentos</a></li>
+            <li><a href="/01.PROTOTIPOS/home-v14.html#contato">Contato</a></li>
+
+            <li class="nav-social">
+                <ul class="social">
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ============ PEDIDO DE ORAÇÃO ============ -->
+<!-- ATENÇÃO: não coloque nenhum <form> aqui fora. Só existe UM formulário, o formPedido, lá embaixo. -->
+<main class="pg-pedido">
+    <div class="container">
+
+        <h1 class="section-title">Pedido de Oração</h1>
+        <p class="s-sub">Queremos rezar pelas suas intenções. Deixe aqui o seu pedido.</p>
+
+        <div class="pp-wrap">
+
+            <!-- Formulário -->
+            <section class="pp-card" aria-labelledby="pp-titulo">
+                <header class="pp-card-head">
+                    <span class="h-icon"><i class="fas fa-hands-praying"></i></span>
+                    <h2 id="pp-titulo">Conte sua intenção</h2>
+                </header>
+
+                <div id="ppAlerta" class="pp-alerta" role="alert" hidden></div>
+
+                <form id="formPedido" action="https://formsubmit.co/mvinicraft@gmail.com" method="POST" novalidate>
+
+                    <div class="pp-field" id="campo-nome">
+                        <label for="nome">Nome completo <span class="req">*</span></label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name" maxlength="80" required>
+                        <p class="pp-erro" id="erro-nome"></p>
+                    </div>
+
+                    <div class="pp-field" id="campo-email">
+                        <label for="email">E-mail <span class="req">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" autocomplete="email" maxlength="120" required>
+                        <p class="pp-erro" id="erro-email"></p>
+                    </div>
+
+                    <div class="pp-field" id="campo-pedido">
+                        <label for="pedido">Pedido de oração <span class="req">*</span></label>
+                        <textarea id="pedido" name="pedido" placeholder="Escreva aqui seu pedido de oração..." maxlength="500" required></textarea>
+                        <div class="pp-contador" id="contador">0 / 500 caracteres</div>
+                        <p class="pp-erro" id="erro-pedido"></p>
+                    </div>
+
+                    <label class="pp-check" for="sigilo">
+                        <input type="checkbox" id="sigilo" name="sigilo">
+                        <span>Prefiro que meu nome não seja citado na oração.</span>
+                    </label>
+
+                    <!-- Armadilha para robôs: pessoas não veem nem preenchem este campo -->
+                    <div class="pp-hp" aria-hidden="true">
+                        <label for="website">Não preencha este campo</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- Campos do FormSubmit. Sem o _captcha=false, ele mostra a verificação "não sou um robô". -->
+                    <input type="hidden" name="_subject" value="Novo pedido de oração">
+                    <input type="hidden" name="_template" value="table">
+                    <!-- Para onde a pessoa volta depois do envio (o ?enviado=1 abre o pop-up).
+                         Troque pelo endereço real desta página quando publicar o site. -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/01.PROTOTIPOS/pedido-oracao.html?enviado=1">
+
+                    <div class="pp-acoes">
+                        <p class="pp-nota"><i class="fas fa-lock"></i> Usamos seus dados apenas para receber o seu pedido.</p>
+                        <button type="submit" class="btn-primary pp-btn" id="btnEnviar">
+                            <i class="fas fa-hands-praying"></i>
+                            <span class="pp-btn-texto">Enviar pedido de oração</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Tela de confirmação (aparece depois do envio) -->
+                <div class="pp-sucesso" id="ppSucesso" hidden>
+                    <span class="h-icon po-icon"><i class="fas fa-check"></i></span>
+                    <h3>Pedido enviado</h3>
+                    <p id="ppSucessoTexto">Recebemos a sua intenção e ela será colocada em oração. Que Deus abençoe você e sua família.</p>
+                    <div class="pp-sucesso-botoes">
+                        <button type="button" class="pp-btn-sec" id="btnOutro">Fazer outro pedido</button>
+                        <a href="/01.PROTOTIPOS/home-v14.html" class="btn-primary">Voltar ao início</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coluna lateral -->
+            <aside class="pp-aside">
+                <figure class="pp-verso">
+                    <blockquote>
+                        Pedi e vos será dado; buscai e achareis; batei e vos será aberto.
+                    </blockquote>
+                    <figcaption>Mateus 7,7</figcaption>
+                </figure>
+
+                <ul class="pp-info">
+                    <li>
+                        <span class="h-icon"><i class="fas fa-envelope"></i></span>
+                        <p>Seu pedido chega direto à equipe da paróquia, por e-mail.</p>
+                    </li>
+                    <li>
+                        <span class="h-icon"><i class="fas fa-user-lock"></i></span>
+                        <p>Marque a opção de sigilo se não quiser que seu nome seja citado.</p>
+                    </li>
+                    <li>
+                        <span class="h-icon"><i class="fas fa-phone"></i></span>
+                        <p>Em caso de urgência, ligue para a secretaria: <a href="tel:+55 71 9647-9917">+55 71 9647-9917</a></p>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<!-- ============ RODAPÉ (igual ao da home) ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="f-top">
+            <div class="f-brand">
+                <strong>Paróquia Divino Espírito Santo</strong>
+                <span>Arquidiocese de Salvador</span>
+            </div>
+
+            <nav class="f-links" aria-label="Links do rodapé">
+                <a href="/01.PROTOTIPOS/home-v14.html">Início</a>
+                <a href="/01.PROTOTIPOS/home-v14.html#horarios">Horários</a>
+                <a href="/01.PROTOTIPOS/sacramentos.html">Sacramentos</a>
+                <a href="/01.PROTOTIPOS/home-v14.html#a-palavra">A Palavra</a>
+                <a href="/01.PROTOTIPOS/home-v14.html#contato">Contato</a>
+            </nav>
+
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+
+        <p class="f-copy">© 2026 · Todos os direitos reservados · Paz e bem</p>
+    </div>
+</footer>
+
+<script src="mobile-navbar.js"></script>
+<script src="voltar-topo.js"></script>
+<!-- A ORDEM IMPORTA: primeiro o filtro, depois o script que usa o filtro -->
+<script src="filtro-palavras.js"></script>
+<script src="pedido-oracao-form.js"></script>
+</body>
+</html>

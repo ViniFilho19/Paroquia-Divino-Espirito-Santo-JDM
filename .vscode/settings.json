@@ -1,0 +1,5 @@
+{
+    "editor.suggest.showWords": false,
+    "editor.inlineSuggest.showToolbar": "never",
+    "editor.inlineSuggest.enabled": false
+}
