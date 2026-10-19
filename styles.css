@@ -30,18 +30,18 @@
             background-color: #FFFFFF;
             scroll-behavior: smooth;
             line-height: 1.5;
-           
         }
-html,
-body {
-    overflow-x: clip;   /* corta o que passa da largura da tela, sem criar rolagem */
-    max-width: 100%;
-}
 
-/* fallback para navegadores bem antigos */
-@supports not (overflow: clip) {
-    html { overflow-x: hidden; }
-}
+        /* Corta o que passa da largura da tela (menu mobile fechado) sem criar rolagem lateral */
+        html,
+        body {
+            overflow-x: clip;
+            max-width: 100%;
+        }
+
+        @supports not (overflow: clip) {
+            html { overflow-x: hidden; }
+        }
 
         a {
         color: #fff;
@@ -112,11 +112,11 @@ img.nav-logo {
     text-transform: uppercase;
     letter-spacing: 4px;
 }
- 
+
 nav {
-     position: sticky;      /* antes: relative */
+    position: sticky;
     top: 0;
-    z-index: 1000;         /* fica por cima do conteúdo e do slideshow */
+    z-index: 1000;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -124,37 +124,23 @@ nav {
     background: #98050D;
     height: 12vh;
 }
- 
+
 .nav-list {
     list-style: none;
     display: flex;
-    transform: translateX(100%);
- 
 }
-@media (min-width: 1000px) {
-       .nav-list {
-           visibility: visible;
-           transform: none;
-       }
-   }
-.nav-list.active {
-    transform: translateX(0);
-    visibility: visible;
-    transition: transform 0.3s ease-in, visibility 0s;
-}
- 
+
 .nav-list li {
     letter-spacing: 3px;
     margin-left: 32px;
 }
- 
+
 .nav-list li a {
     display: block;
     padding: 8px 0;
 }
 
- 
-/* Item ativo (como o destaque da referência) */
+/* Item ativo */
 .nav-list li a.ativo {
     background: #F6E9C8;
     color: #98050D;
@@ -162,14 +148,15 @@ nav {
     border-radius: 4px;
     font-weight: 600;
 }
- 
+
 .nav-list li a.ativo:hover {
     opacity: 1;
 }
- 
+
 .nav-social {
     display: none; /* só aparece no mobile */
 }
+
 /* Ícones sociais dentro do menu: anula o estilo dos links do menu */
 .nav-list .social a {
     display: flex;
@@ -185,12 +172,12 @@ nav {
     margin-left: 0;
     letter-spacing: 0;
 }
- 
+
 .mobile-menu {
     display: none;
     cursor: pointer;
 }
- 
+
 .mobile-menu div {
     width: 32px;
     height: 2px;
@@ -198,7 +185,7 @@ nav {
     margin: 8px;
     transition: 0.3s;
 }
- 
+
 /* Telas médias: links mais compactos para caberem */
 @media (max-width: 1250px) {
     .nav-list li {
@@ -207,23 +194,19 @@ nav {
         font-size: 14px;
     }
 }
- 
-/* ---------- Mobile ---------- */
+
+/* ---------- Mobile (o menu lateral só existe aqui) ---------- */
 @media (max-width: 999px) {
-    body {
-       
-    }
- 
     .topbar {
         display: none;
     }
- 
+
     img.nav-logo {
         max-width: 150px;
         height: auto;
-        margin: 0%;
+        margin: 0;
     }
- 
+
     .nav-list {
         position: absolute;
         top: 100%;                       /* começa logo abaixo da nav */
@@ -237,39 +220,39 @@ nav {
         align-items: center;
         justify-content: space-around;
         transform: translateX(100%);
-       visibility: hidden;
-           transition: transform 0.3s ease-in, visibility 0s linear 0.3s;
+        visibility: hidden;
+        transition: transform 0.3s ease-in, visibility 0s linear 0.3s;
     }
- 
+
+    .nav-list.active {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.3s ease-in, visibility 0s;
+    }
+
     .nav-list li {
         margin-left: 0;
         opacity: 0;
         font-size: 16px;
     }
- 
+
     .nav-social {
         display: block;
     }
- 
+
     .nav-social .social {
         justify-content: center;
     }
- 
+
     .nav-social .social li {
         opacity: 1;
     }
- 
+
     .mobile-menu {
         display: block;
     }
 }
- 
-.nav-list.active {
-    transform: translateX(0);
-            visibility: visible;
-           transition: transform 0.3s ease-in, visibility 0s;
-}
- 
+
 @keyframes navLinkFade {
     from {
         opacity: 0;
@@ -280,15 +263,15 @@ nav {
         transform: translateX(0);
     }
 }
- 
+
 .mobile-menu.active .line1 {
     transform: rotate(-45deg) translate(-8px, 8px);
 }
- 
+
 .mobile-menu.active .line2 {
     opacity: 0;
 }
- 
+
 .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
 }
@@ -2103,19 +2086,5 @@ html {
         bottom: 14px;
         width: 44px;
         height: 44px;
-    }
-}
-
-@media (min-width: 1000px) {
-    .nav-list {
-        visibility: visible !important;
-        transform: none !important;
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-    }
-
-    .nav-list li {
-        opacity: 1 !important;
     }
 }
