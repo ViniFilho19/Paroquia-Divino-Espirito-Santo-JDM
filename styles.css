@@ -30,8 +30,18 @@
             background-color: #FFFFFF;
             scroll-behavior: smooth;
             line-height: 1.5;
-            overflow-x: hidden;
+           
         }
+html,
+body {
+    overflow-x: clip;   /* corta o que passa da largura da tela, sem criar rolagem */
+    max-width: 100%;
+}
+
+/* fallback para navegadores bem antigos */
+@supports not (overflow: clip) {
+    html { overflow-x: hidden; }
+}
 
         a {
         color: #fff;
@@ -118,6 +128,14 @@ nav {
 .nav-list {
     list-style: none;
     display: flex;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease-in, visibility 0s linear 0.3s;
+}
+.nav-list.active {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.3s ease-in, visibility 0s;
 }
  
 .nav-list li {
@@ -129,6 +147,7 @@ nav {
     display: block;
     padding: 8px 0;
 }
+
  
 /* Item ativo (como o destaque da referência) */
 .nav-list li a.ativo {
@@ -187,7 +206,7 @@ nav {
 /* ---------- Mobile ---------- */
 @media (max-width: 999px) {
     body {
-        overflow-x: hidden;
+       
     }
  
     .topbar {
