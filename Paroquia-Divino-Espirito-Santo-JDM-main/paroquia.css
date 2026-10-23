@@ -1,0 +1,543 @@
+/* =========================================================
+   PÁGINA "PARÓQUIA" - carregue DEPOIS do styles.css
+   Reaproveita: .container, .section-title, .s-sub, .h-icon, .p-foto
+   Classes novas começam com "pq-".
+========================================================= */
+
+/* títulos alinhados à esquerda (o .section-title padrão é centralizado) */
+.pq-left {
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.pq-left::after {
+    margin-left: 0;
+}
+
+/* ---------- Banner ---------- */
+.pq-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 0 80px;
+    background: linear-gradient(120deg, #5a0207 0%, #8B0000 55%, #b07b08 135%);
+}
+
+.pq-hero-ph {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(160px, 24vw, 340px);
+    color: rgba(246, 233, 200, 0.1);
+    pointer-events: none;
+}
+
+.pq-hero-in {
+    position: relative;
+    z-index: 1;
+}
+
+.pq-crumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 0.85rem;
+    color: #f6e9c8;
+}
+
+.pq-crumb i {
+    font-size: 0.6rem;
+    color: #D4AF37;
+}
+
+.pq-crumb a {
+    color: #D4AF37;
+}
+
+.pq-hero h1 {
+    max-width: 720px;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    color: #fff;
+}
+
+.pq-line {
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 18px 0 20px;
+    background: #D4AF37;
+    border-radius: 4px;
+}
+
+.pq-hero-desc {
+    max-width: 560px;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    line-height: 1.6;
+    color: #f6e9c8;
+}
+
+.pq-hero-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.pq-hero-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #D4AF37;
+    background: rgba(212, 175, 55, 0.14);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 999px;
+}
+
+/* ---------- Nossa história ---------- */
+.pq-historia {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.pq-historia-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.pq-historia-texto p {
+    position: relative;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #3e4548;
+}
+
+.pq-historia-foto {
+    position: relative;
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    border-radius: 28px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #8B0000, #b07b08);
+    box-shadow: 0 16px 36px rgba(80, 40, 10, 0.18);
+}
+
+.pq-historia-foto i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: rgba(246, 233, 200, 0.4);
+}
+
+.pq-historia-foto img {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- Faixa de destaques ---------- */
+.pq-numeros {
+    padding: 40px 0;
+    background: #98050D;
+    border-top: 4px solid #D4AF37;
+}
+
+.pq-num-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 28px;
+    text-align: center;
+}
+
+.pq-num strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.pq-num span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.88rem;
+    color: #f6e9c8;
+}
+
+/* ---------- Linha do tempo ---------- */
+.pq-linha {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #fffdf7 0%, #faf5ea 100%);
+}
+
+.pq-tempo {
+    list-style: none;
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.pq-tempo::before {
+    content: "";
+    position: absolute;
+    left: 27px;
+    top: 10px;
+    bottom: 10px;
+    width: 3px;
+    background: #D4AF37;
+    border-radius: 4px;
+}
+
+.pq-tempo li {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    padding-bottom: 36px;
+}
+
+.pq-tempo li:last-child {
+    padding-bottom: 0;
+}
+
+.pq-ponto {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D4AF37;
+    background: #8B0000;
+    border: 3px solid #fffdf7;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 16px rgba(139, 0, 0, 0.25);
+}
+
+.pq-tempo h3 {
+    margin: 4px 0 6px;
+    font-size: 1.2rem;
+    color: #8B0000;
+}
+
+.pq-tempo p {
+    line-height: 1.65;
+    color: #4a4a4a;
+}
+
+/* ---------- Cards (decreto e comunidades) ---------- */
+.pq-decreto,
+.pq-comunidades {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.pq-comunidades {
+    background: linear-gradient(180deg, #fffdf7 0%, #faf5ea 100%);
+}
+
+.pq-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.pq-card {
+    flex: 1 1 300px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 26px;
+    background: #fff;
+    border: 1px solid #f0e6cc;
+    border-top: 4px solid #D4AF37;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(80, 40, 10, 0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.pq-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(80, 40, 10, 0.12);
+}
+
+.pq-card .h-icon {
+    margin-bottom: 14px;
+}
+
+.pq-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #8B0000;
+}
+
+.pq-card p {
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+.pq-link {
+    margin-top: auto;
+    padding-top: 16px;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #8B0000;
+}
+
+.pq-link:hover {
+    opacity: 1;
+    color: #a20f1a;
+}
+
+/* ---------- Primeiro pároco ---------- */
+.pq-paroco {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #fffdf7 0%, #faf5ea 100%);
+}
+
+.pq-paroco-top {
+    display: grid;
+    grid-template-columns: minmax(260px, 380px) 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+.pq-paroco-top p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #3e4548;
+}
+
+.pq-paroco-top .pq-paroco-nome {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #b07b08;
+}
+
+.pq-sinais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+    margin-top: 56px;
+}
+
+.pq-sinal {
+    padding: 26px 22px;
+    background: #fff;
+    border: 1px solid #f0e6cc;
+    border-left: 4px solid #8B0000;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(80, 40, 10, 0.05);
+}
+
+.pq-sinal .h-icon {
+    margin-bottom: 12px;
+}
+
+.pq-sinal h3 {
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+    color: #8B0000;
+}
+
+.pq-sinal p {
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+/* ---------- Missão, visão e valores ---------- */
+.pq-missao {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.pq-mvv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pq-mvv article {
+    padding-left: 22px;
+    border-left: 4px solid #a20f1a;
+}
+
+.pq-mvv h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    color: #8B0000;
+}
+
+.pq-mvv h3 i {
+    font-size: 1rem;
+    color: #D4AF37;
+}
+
+.pq-mvv p {
+    line-height: 1.7;
+    color: #3e4548;
+}
+
+/* ---------- Convite final ---------- */
+.pq-convite {
+    padding: 0 0 80px;
+    background: #fff;
+}
+
+.pq-convite-box {
+    padding: 56px 30px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #8B0000 0%, #6E0309 100%);
+    border-radius: 32px;
+    box-shadow: 0 16px 36px rgba(139, 0, 0, 0.25);
+}
+
+.pq-convite-box .h-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+    color: #D4AF37;
+    background: rgba(212, 175, 55, 0.18);
+}
+
+.pq-convite-box h2 {
+    margin-bottom: 12px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.pq-convite-box p {
+    max-width: 600px;
+    margin: 0 auto 28px;
+    line-height: 1.65;
+    color: #f6e9c8;
+}
+
+.pq-convite-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.pq-btn-claro,
+.pq-btn-borda {
+    display: inline-block;
+    padding: 14px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.pq-btn-claro {
+    color: #8B0000;
+    background: #D4AF37;
+}
+
+.pq-btn-borda {
+    color: #fff;
+    border: 2px solid #D4AF37;
+}
+
+.pq-btn-claro:hover,
+.pq-btn-borda:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.pq-btn-borda:hover {
+    color: #8B0000;
+    background: #D4AF37;
+}
+
+/* ---------- Foco por teclado ---------- */
+.pq-link:focus-visible,
+.pq-btn-claro:focus-visible,
+.pq-btn-borda:focus-visible {
+    outline: 3px solid #D4AF37;
+    outline-offset: 3px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+
+    .pq-historia-grid,
+    .pq-paroco-top {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .pq-paroco-top .p-foto {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .pq-hero {
+        padding: 64px 0 56px;
+    }
+
+    .pq-historia,
+    .pq-linha,
+    .pq-decreto,
+    .pq-comunidades,
+    .pq-paroco,
+    .pq-missao {
+        padding: 56px 0;
+    }
+
+    .pq-convite {
+        padding-bottom: 56px;
+    }
+
+    .pq-convite-box {
+        padding: 40px 20px;
+    }
+
+    .pq-convite-box h2 {
+        font-size: 1.6rem;
+    }
+
+    .pq-tempo::before {
+        left: 21px;
+    }
+
+    .pq-ponto {
+        width: 44px;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+
+    .pq-tempo li {
+        gap: 16px;
+    }
+}

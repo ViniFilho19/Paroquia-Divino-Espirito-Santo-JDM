@@ -1,0 +1,262 @@
+/* =========================================================
+   PÁGINA: COMUNIDADES
+   Carregue DEPOIS do styles.css. Reaproveita do styles.css:
+   .container, .section-title, .s-sub, .h-icon, .h-card, .h-lista,
+   .btn-primary, .social, .site-footer (e filhos).
+   Reaproveita do pedido-oracao.css (opcional): .pp-btn-sec
+   -> já está duplicado aqui embaixo, então não precisa carregar.
+========================================================= */
+
+/* O link da página atual no menu (o .ativo já existe no styles.css) */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Introdução ---------- */
+.cm-intro {
+    padding: 80px 0 40px;
+    background: linear-gradient(180deg, #fffdf7 0%, #faf5ea 100%);
+}
+
+.cm-intro .s-sub {
+    margin-bottom: 32px;
+}
+
+.cm-atalhos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.cm-atalho {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 26px;
+    font-weight: 600;
+    color: #8B0000;
+    background: #fff;
+    border: 1px solid #f0e6cc;
+    border-radius: 50px;
+    box-shadow: 0 6px 18px rgba(80, 40, 10, 0.06);
+}
+
+.cm-atalho i {
+    color: #b07b08;
+}
+
+.cm-atalho:hover {
+    opacity: 1;
+    border-color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+/* ---------- Seções de cada comunidade ---------- */
+.cm-secao {
+    padding: 70px 0 80px;
+    background: #fff;
+    scroll-margin-top: 12vh;
+}
+
+.cm-secao--alt {
+    background: linear-gradient(180deg, #fffdf7 0%, #faf5ea 100%);
+}
+
+.cm-wrap {
+    display: grid;
+    grid-template-columns: minmax(280px, 460px) 1fr;
+    gap: 72px;
+    align-items: center;
+}
+
+/* versão com a foto à direita */
+.cm-wrap--inv {
+    grid-template-columns: 1fr minmax(280px, 460px);
+}
+
+.cm-wrap--inv .cm-foto {
+    order: 2;
+}
+
+/* ---------- Foto (com moldura dourada e fundo de reserva) ---------- */
+.cm-foto {
+    position: relative;
+    margin: 0;
+}
+
+.cm-foto::before {
+    content: "";
+    position: absolute;
+    inset: 18px -18px -18px 18px;
+    border: 3px solid #D4AF37;
+    border-radius: 32px;
+    z-index: 0;
+}
+
+.cm-foto-fundo,
+.cm-foto img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 28px;
+    box-shadow: 0 16px 36px rgba(80, 40, 10, 0.18);
+}
+
+.cm-foto img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cm-foto-fundo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: rgba(246, 233, 200, 0.55);
+}
+
+.cm-foto-fundo--1 { background: linear-gradient(120deg, #6E0309 0%, #98050D 55%, #D4AF37 135%); }
+.cm-foto-fundo--2 { background: linear-gradient(120deg, #4a0206 0%, #8B0000 50%, #a20f1a 100%); }
+
+/* ---------- Texto ---------- */
+.cm-eyebrow {
+    display: block;
+    margin-bottom: 10px;
+    color: #b07b08;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* título alinhado à esquerda (o .section-title padrão é centralizado) */
+.cm-title {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.cm-title::after {
+    margin-left: 0;
+}
+
+.cm-texto p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #3e4548;
+}
+
+.cm-local {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 22px;
+    padding: 16px 18px;
+    background: #fff;
+    border: 1px solid #f0e6cc;
+    border-left: 4px solid #8B0000;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(80, 40, 10, 0.05);
+}
+
+.cm-local strong {
+    color: #8B0000;
+}
+
+.cm-local small {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* ---------- Horários ---------- */
+.cm-horarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 360px));
+    justify-content: center;
+    gap: 28px;
+    margin-top: 56px;
+}
+
+/* ---------- Chamada final ---------- */
+.cm-cta {
+    padding: 56px 0 80px;
+    background: #fff;
+    text-align: center;
+}
+
+.cm-cta .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.cm-btn-sec {
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: 600;
+    color: #8B0000;
+    background: #fff;
+    border: 2px solid #8B0000;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.cm-btn-sec:hover {
+    background: rgba(139, 0, 0, 0.06);
+    opacity: 1;
+}
+
+/* ---------- Foco visível por teclado ---------- */
+.cm-atalho:focus-visible,
+.cm-btn-sec:focus-visible {
+    outline: 3px solid #D4AF37;
+    outline-offset: 3px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+    .cm-wrap,
+    .cm-wrap--inv {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    /* no celular a foto sempre vem primeiro */
+    .cm-wrap--inv .cm-foto {
+        order: 0;
+    }
+
+    .cm-foto {
+        max-width: 420px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .cm-intro { padding: 56px 0 28px; }
+    .cm-secao { padding: 48px 0 56px; }
+    .cm-cta   { padding: 40px 0 56px; }
+
+    .cm-horarios {
+        margin-top: 44px;
+    }
+
+    .cm-cta .container > * {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
